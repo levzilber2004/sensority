@@ -1,0 +1,61 @@
+:root {
+  --bottom: #024740;
+  --top: #009889;
+  --element-margin: 0.5vh;
+  --element-padding: 0.5vh;
+  --logo-size: 5vh;
+  --logo-border-size: 0.5vh;
+  --border-thickness: 0.1vh;
+  --border-radius: 1vh;
+  --scrollbar-size: 1.5vh;
+  --amount-of-buttons: 3;
+}
+
+* {
+  outline: none !important;
+  color: var(--bottom);
+  font-family: 'MateSC-Regular';
+}
+
+body {
+  margin: var(--element-margin) var(--element-margin);
+  height: 100vh;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+    to top left,
+    var(--bottom) 0%,
+    var(--top) 100%
+  );
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+@font-face {
+  font-family: 'MateSC-Regular';
+  src: url('./../fonts/Poppins-bold.ttf');
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('./../fonts/Rubik-Bold.ttf');
+}
+
+.pop-button {
+  transition: transform 0.1s;
+}
+
+.pop-button:active {
+  border: none;
+  transform: scale(0.9);
+}
+
+.disabled {
+  color: white;
+  background-color: darkslategrey;
+}
+
+.disabled::placeholder {
+  color: lightslategray;
+}

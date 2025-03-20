@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON to HTML</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="main-footer.css" />
+    <link rel="stylesheet" href="main-header.css" />
+  </head>
+  <body>
+    <header id="main-header">
+      <img id="logo" src="./../images/app-logo.png" />
+      <h1 id="logo-title">sensority</h1>
+      <input
+        id="search-input"
+        class="element-shadow disabled"
+        type="text"
+        placeholder="search by name or by range (min-max) for example (1-69)"
+      />
+      <section id="search-section" class="element-shadow fade-out">
+        <ul id="search-filters-list">
+          <h3 id="filters-list-title">SEARCH FILTERS</h3>
+        </ul>
+      </section>
+      <button class="search-button pop-button element-shadow" loadKey="Search">
+        <img class="search-image" src="../images/search.png" />
+      </button>
+      <button class="search-button pop-button element-shadow" loadKey="Stats">
+        <img class="search-image" src="../images/stats.png" />
+      </button>
+      <button class="search-button pop-button element-shadow" loadKey="Cart">
+        <img class="search-image" src="../images/cart.png" />
+        <span class="cart-items-number">0</span>
+      </button>
+    </header>
+    <footer id="main-footer">
+      <h1 id="footer-loading-text">LOADING...</h1>
+    </footer>
+    <script src="qrc:///qtwebchannel/qwebchannel.js"></script>
+    <script src="index.js"></script>
+    <script src="data.js"></script>
+    <script src="searchhover.js"></script>
+    <script src="searchstats.js"></script>
+    <script src="searchcart.js"></script>
+    <script src="searchengine.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

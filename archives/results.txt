@@ -1,0 +1,6 @@
+keyword in str(mainObject['accelerometer']['name']).lower() for keyword in
+
+
+keyword in str(mainObject['accelerometer'].get('name', '')).lower() or 
+       keyword in str(mainObject['pressure'].get('manufacturer', '')).lower() 
+       for keyword in
