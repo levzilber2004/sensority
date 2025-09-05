@@ -9,13 +9,13 @@ async function startWindows(
 ) {
   const jsonData = await importData(jsonUrl);
   const sortedData = sortData(jsonData);
-  //   new QWebChannel(qt.webChannelTransport, function (channel) {
-  //     interfaceModule = channel.objects.bridge;
-  //     interfaceModule.sendJsCommand.connect(function (command) {
-  //       eval(command);
-  //     });
-  //   });
-  // preloadStatsData(sortedData);
+  new QWebChannel(qt.webChannelTransport, function (channel) {
+    interfaceModule = channel.objects.bridge;
+    interfaceModule.sendJsCommand.connect(function (command) {
+      eval(command);
+    });
+  });
+  preloadStatsData(sortedData);
   loadLoadButtons(sortedData, searchInput, mainFooter);
   createFilterSearchElements(
     searchFiltersList,
@@ -39,10 +39,10 @@ async function startWindows(
 }
 
 function loadLoadButtons(sortedData, searchInput, mainFooter) {
-  document.querySelectorAll('.search-button').forEach((button) => {
-    button.addEventListener('mousedown', () => {
+  document.querySelectorAll(".search-button").forEach((button) => {
+    button.addEventListener("mousedown", () => {
       clearAllPageLoadingIntervals();
-      window[`load${button.getAttribute('loadKey')}`](
+      window[`load${button.getAttribute("loadKey")}`](
         sortedData,
         searchInput,
         mainFooter
@@ -59,5 +59,5 @@ startWindows(
   filteredKeys,
   additionalSearchFilters,
   dataKeyNames,
-  './data.json'
+  "./data.json"
 );

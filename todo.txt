@@ -1,3 +1,0 @@
-
-find the maximum possible Hz rate the sensor can deliver - by hand
-explaination about the sensors
